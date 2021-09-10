@@ -1,0 +1,17 @@
+package decoratorDP.pizza.decorator;
+
+import decoratorDP.pizza.Pizza;
+
+public class GarlicPizza extends PizzaDecorator{
+	public class GarlicPizza(Pizza pizza){
+		super(pizza);
+		this.cost=30;
+		this.description="GarlicPizza";
+	}
+	public double getCost(){
+		return cost+pizza.getCost();
+	}
+	public String getDescription(){
+		return pizza.getDescription()+","+description;
+	}
+}
